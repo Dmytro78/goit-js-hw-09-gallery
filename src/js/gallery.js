@@ -1,4 +1,7 @@
 import images from "./gallery-items.js";
+import { scrolling } from './carousel-gallery.js';
+// import { scrolling, closeModalOverlay, closeEsc } from './carousel-gallery.js';
+
 
 const galleryBox = document.querySelector(".js-gallery");
 const overlayBox = document.querySelector(".js-gallery");
@@ -10,7 +13,7 @@ const imgMarkup = createGallery(images);
 
 const boxImg = (src, alt) => {
   lightBoxImg.src = src;
-  lightBoxImg.alt = alt;
+  lightBoxImg.alt = alt; 
 }
 
 galleryBox.insertAdjacentHTML("beforeend", imgMarkup);
@@ -33,7 +36,7 @@ function createGallery(images) {
   }).join("");
 }
 
-// open
+open
 
 function isOpenModal(e) {
   const galleryEl = e.target;
@@ -78,7 +81,7 @@ function closeEsc(e) {
   }  
 }
 
-//left-right 
+// left-right 
 
 const img = document.querySelectorAll(".gallery__image");
 const arrayImages = [];
@@ -86,6 +89,7 @@ const arrayImages = [];
 img.forEach((el) => {
   arrayImages.push(el.getAttribute("data-source"));
 });
+
 function scrolling(evt) {
   let newIndex;
   const currentId = arrayImages.indexOf(lightBoxImg.src);
