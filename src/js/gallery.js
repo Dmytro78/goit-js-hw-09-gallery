@@ -90,19 +90,19 @@ img.forEach((el) => {
   arrayImages.push(el.getAttribute("data-source"));
 });
 
-function scrolling(evt) {
-  let newIndex;
-  const currentId = arrayImages.indexOf(lightBoxImg.src);
-  if (evt.key === "ArrowLeft") {
-    newIndex = currentId - 1;
-    if (newIndex == -1) {
-      newIndex = arrayImages.length - 1;
-    }
-  } else if (evt.key === "ArrowRight") {
-    newIndex = currentId + 1;
-    if (newIndex === arrayImages.length) {
-      newIndex = 0;
-    }
-  }
-  lightBoxImg.src = arrayImages[newIndex];
-}
+// function scrolling(evt) {
+//   let newIndex;
+//   const currentId = arrayImages.indexOf(lightBoxImg.src);
+//   if (evt.key === "ArrowLeft") {
+//     newIndex = currentId - 1;
+//     if (newIndex == -1) {
+//       newIndex = arrayImages.length - 1;
+//     }
+//   } else if (evt.key === "ArrowRight") {
+//     newIndex = currentId + 1;
+//     if (newIndex === arrayImages.length) {
+//       newIndex = 0;
+//     }
+//   }
+//   lightBoxImg.src = arrayImages[newIndex];
+// }
